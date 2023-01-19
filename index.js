@@ -158,3 +158,19 @@ allChevrons.forEach((item) => {
     }
   });
 });
+
+
+const images = ['/Reading-glasses-desktop-1024x538.jpg', '/image2.jpg', '/image3.jpg']
+let currentImage = 0;
+
+function nextImage() {
+    currentImage++
+    if (currentImage >= images.length) {
+        currentImage = 0
+    }
+
+    document.getElementById('team-image').src = images[currentImage]
+    
+}
+
+setInterval(nextImage, 3000)
