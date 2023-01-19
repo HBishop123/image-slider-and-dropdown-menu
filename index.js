@@ -1,6 +1,7 @@
 // document references
 const linkCard = document.querySelector(".links");
 const hoverButton = document.querySelector(".hover-button");
+const triangle = document.querySelector(".uparrow")
 
 const chevronOne = document.querySelector("#chevron1");
 const chevronTwo = document.querySelector("#chevron2");
@@ -20,14 +21,17 @@ const allLinks = document.querySelectorAll("li");
 const allChevrons = document.querySelectorAll(".chevron");
 
 
+
 // display of the menu card
 hoverButton.addEventListener("mouseenter", () => {
   linkCard.style.display = "flex";
+  triangle.style.display = "block"
   linkCard.className = "links";
 });
 
 linkCard.addEventListener("mouseleave", () => {
   linkCard.className = "links-after";
+  triangle.style.display = "none"
 });
 
 // function to underline the card and scale chevron
