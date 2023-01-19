@@ -50,7 +50,7 @@ button:hover {
   height: 400px;
   display: flex;
   flex-direction: row;
-  font-family: 'Asap', sans-serif
+  font-family: "Asap", sans-serif;
 }
 /* card for all navigation end */
 
@@ -105,6 +105,12 @@ ul {
 
 #practise-area {
   align-self: flex-start;
+  display: flex;
+  align-items: center;
   padding-left: 15px;
+}
+
+#practise-area > img {
+  padding-top: 2px;
 }
 /* right side of the card end */
