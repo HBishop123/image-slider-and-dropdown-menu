@@ -56,10 +56,9 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 0.5fr;
   grid-template-rows: repeat(6, 1fr);
-
 }
 
-.left-side-links{
+.left-side-links {
   display: grid;
   grid-column: 1/2;
   grid-row: 1/7;
