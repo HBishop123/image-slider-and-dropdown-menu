@@ -161,9 +161,9 @@ allChevrons.forEach((item) => {
 });
 
 const images = [
-  "Reading-glasses-desktop-1024x538.jpg",
-  "image2.jpg",
-  "image3.jpg",
+  "./Reading-glasses-desktop-1024x538.jpg",
+  "./image2.jpg",
+  "./image3.jpg",
 ];
 let currentImage = 0;
 
