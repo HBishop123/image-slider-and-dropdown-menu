@@ -114,6 +114,16 @@ ul {
 #practise-area > img {
   padding-top: 2px;
 }
+
+#practise-area > img:hover {
+  scale: 1.09;
+}
+
+#practise-area:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /* right side of the card end */
 
 /* animations */
@@ -122,7 +132,7 @@ ul {
   animation: slideInFromTop 0.5s ease-in-out forwards;
 }
 
-.links-after{
+.links-after {
   animation: slideOutToTop 0.2s ease-in-out forwards;
   background-color: rgb(255, 255, 255);
   height: max-content;
@@ -132,7 +142,6 @@ ul {
   flex-direction: row;
   font-family: "Asap", sans-serif;
 }
-
 
 @keyframes slideInFromTop {
   0% {
@@ -145,13 +154,18 @@ ul {
   }
 }
 
-@keyframes slideOutToTop{
-  0%{
+@keyframes slideOutToTop {
+  0% {
     transform: translateY(0%);
     opacity: 100;
   }
-  100%{
+  100% {
     transform: translateY((-5%));
     opacity: 0;
   }
+}
+
+ul > li:hover,
+.left-side-arrow > img {
+  cursor: pointer;
 }
