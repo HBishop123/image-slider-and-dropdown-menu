@@ -26,7 +26,7 @@ header {
   gap: 5px;
 }
 
-button {
+.hover-button {
   height: 50px;
   width: 50px;
   border-radius: 5px;
@@ -36,7 +36,7 @@ button {
   margin-top: 20px;
 }
 
-button:hover {
+.hover-button:hover {
   scale: 1.1;
   background-color: rgb(15, 243, 15);
   cursor: pointer;
@@ -180,17 +180,10 @@ ul > li:hover,
   cursor: pointer;
 }
 
-main {
-  position: absolute;
-  height: 60vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+#show-scroller{
+  width: 100px;
+  height: 100px;
 }
 
-.image-container {
-  width: 400px;
-  height: 400px;
-  background-color: black;
+#show-scroller{
 }
