@@ -11,6 +11,7 @@ font-family: 'Roboto', sans-serif; */
 body {
   height: 100vh;
   width: 100vw;
+  background-color: rgb(212, 217, 217);
 }
 
 /* header styling start */
@@ -44,11 +45,11 @@ button:hover {
 
 /* card for all of the navigation start */
 .links {
-  background-color: rgb(212, 217, 217);
+  background-color: rgb(255, 255, 255);
   height: max-content;
   width: 700px;
   height: 400px;
-  display: flex;
+  display: none;
   flex-direction: row;
   font-family: "Asap", sans-serif;
 }
@@ -114,3 +115,18 @@ ul {
   padding-top: 2px;
 }
 /* right side of the card end */
+
+/* animations */
+
+.links {
+  animation: slideInFromTop 0.5s ease-in-out forwards;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
