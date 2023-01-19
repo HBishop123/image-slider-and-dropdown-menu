@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Roboto&display=swap");
+/* font-family: 'Asap', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -46,6 +50,7 @@ button:hover {
   height: 400px;
   display: flex;
   flex-direction: row;
+  font-family: 'Asap', sans-serif
 }
 /* card for all navigation end */
 
