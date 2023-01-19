@@ -9,6 +9,7 @@ body {
   width: 100vw;
 }
 
+/* header styling start */
 header {
   display: flex;
   flex-direction: column;
@@ -35,6 +36,9 @@ button:hover {
   cursor: pointer;
 }
 
+/* header Styling end */
+
+/* card for all of the navigation start */
 .links {
   background-color: rgb(212, 217, 217);
   height: max-content;
@@ -43,13 +47,17 @@ button:hover {
   display: flex;
   flex-direction: row;
 }
+/* card for all navigation end */
 
+/* left side of the card start */
 .left-side {
   height: 100%;
   width: 50%;
   display: flex;
   justify-content: center;
   padding: 10px;
+  padding-top: 40px;
+  gap: 40px;
 }
 
 ul {
@@ -59,6 +67,14 @@ ul {
   gap: 30px;
 }
 
+.left-side-arrow {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* left side of th card end */
+
+/* right side of the card start */
 .right-side {
   display: flex;
   width: 50%;
@@ -66,7 +82,7 @@ ul {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  gap:25px
+  gap: 25px;
 }
 
 img {
@@ -74,7 +90,8 @@ img {
   height: 250px;
 }
 
-#practise-area{
-    align-self: flex-start;
-    padding-left: 15px;
+#practise-area {
+  align-self: flex-start;
+  padding-left: 15px;
 }
+/* right side of the card end */
