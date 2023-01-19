@@ -122,11 +122,36 @@ ul {
   animation: slideInFromTop 0.5s ease-in-out forwards;
 }
 
+.links-after{
+  animation: slideOutToTop 0.2s ease-in-out forwards;
+  background-color: rgb(255, 255, 255);
+  height: max-content;
+  width: 700px;
+  height: 400px;
+  display: none;
+  flex-direction: row;
+  font-family: "Asap", sans-serif;
+}
+
+
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-5%);
+    opacity: 0;
   }
   100% {
     transform: translateY(0%);
+    opacity: 100;
+  }
+}
+
+@keyframes slideOutToTop{
+  0%{
+    transform: translateY(0%);
+    opacity: 100;
+  }
+  100%{
+    transform: translateY((-5%));
+    opacity: 0;
   }
 }
