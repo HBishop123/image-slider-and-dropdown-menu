@@ -1,7 +1,7 @@
 // document references
 const linkCard = document.querySelector(".links");
 const hoverButton = document.querySelector(".hover-button");
-const triangle = document.querySelector(".uparrow")
+const triangle = document.querySelector(".uparrow");
 
 const chevronOne = document.querySelector("#chevron1");
 const chevronTwo = document.querySelector("#chevron2");
@@ -20,18 +20,16 @@ const social = document.querySelector("#social");
 const allLinks = document.querySelectorAll("li");
 const allChevrons = document.querySelectorAll(".chevron");
 
-
-
 // display of the menu card
 hoverButton.addEventListener("mouseenter", () => {
   linkCard.style.display = "flex";
-  triangle.style.display = "block"
+  triangle.style.display = "block";
   linkCard.className = "links";
 });
 
 linkCard.addEventListener("mouseleave", () => {
   linkCard.className = "links-after";
-  triangle.style.display = "none"
+  triangle.style.display = "none";
 });
 
 // function to underline the card and scale chevron
@@ -92,7 +90,6 @@ allLinks.forEach((item) => {
   item.addEventListener("mouseenter", underline);
   item.addEventListener("mouseleave", removeUnderline);
 });
-
 
 // reverse of things: wrote the function within the event listener
 allChevrons.forEach((item) => {
@@ -163,18 +160,20 @@ allChevrons.forEach((item) => {
   });
 });
 
-
-const images = ['/Reading-glasses-desktop-1024x538.jpg', '/image2.jpg', '/image3.jpg']
+const images = [
+  "Reading-glasses-desktop-1024x538.jpg",
+  "image2.jpg",
+  "image3.jpg",
+];
 let currentImage = 0;
 
 function nextImage() {
-    currentImage++
-    if (currentImage >= images.length) {
-        currentImage = 0
-    }
+  currentImage++;
+  if (currentImage >= images.length) {
+    currentImage = 0;
+  }
 
-    document.getElementById('team-image').src = images[currentImage]
-    
+  document.getElementById("team-image").src = images[currentImage];
 }
 
-setInterval(nextImage, 3000)
+setInterval(nextImage, 3000);
