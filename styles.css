@@ -13,6 +13,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: rgb(212, 217, 217);
+
 }
 
 /* header styling start */
@@ -180,10 +181,23 @@ ul > li:hover,
   cursor: pointer;
 }
 
-#show-scroller{
-  width: 100px;
-  height: 100px;
+main{
+  display: flex;
+  height: 400px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#show-scroller{
+.image-container {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+}
+
+.dots{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
