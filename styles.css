@@ -13,7 +13,6 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: rgb(212, 217, 217);
-
 }
 
 /* header styling start */
@@ -183,7 +182,7 @@ ul > li:hover,
 
 /* this is the styling of the image scroller below */
 
-main{
+main {
   display: flex;
   height: 400px;
   width: 100%;
@@ -199,13 +198,17 @@ main{
   overflow-y: hidden;
 }
 
-.dots{
+.dots {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
 
-#big-image-scroller{
+#big-image-scroller {
   height: 300px;
   width: 300px;
+}
+
+.icons {
+  cursor: pointer;
 }

@@ -180,64 +180,180 @@ function nextImage() {
 }
 setInterval(nextImage, 3000);
 
+const biggerImages = [
+  "./animal1.jpg",
+  "./animal2.jpg",
+  "./animal3.jpg",
+  "./animal4.jpg",
+  "./animal5.jpg",
+];
+let currentImageBig = 0;
 
-const biggerImages = ["./animal1.jpg", "./animal2.jpg", "./animal3.jpg", "./animal4.jpg", "./animal5.jpg", ]
-let currentImageBig = 0
-
-function nextBigImage(){
-  currentImageBig++
-  if(currentImageBig >= biggerImages.length){
+function nextBigImage() {
+  currentImageBig++;
+  if (currentImageBig >= biggerImages.length) {
     currentImageBig = 0;
   }
-  document.getElementById("big-image-scroller").src = biggerImages[currentImageBig]
+  document.getElementById("big-image-scroller").src =
+    biggerImages[currentImageBig];
 }
-setInterval(nextBigImage, 3000)
-
-
-
-
+let imageInterval = setInterval(nextBigImage, 3000);
 
 function nextIcon() {
-switch(biggerImages[currentImageBig]){
-  case biggerImages[0]:
-  document.querySelector('#image1').src = "./checkbox-blank-circle.png"
-  document.querySelector('#image2').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image3').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image4').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image5').src = "./checkbox-blank-circle-outline (1).png"
-break
-case biggerImages[1]:
-  document.querySelector('#image1').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image2').src = "./checkbox-blank-circle.png"
-  document.querySelector('#image3').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image4').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image5').src = "./checkbox-blank-circle-outline (1).png"
-break
-case biggerImages[2]:
-  document.querySelector('#image1').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image2').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image3').src = "./checkbox-blank-circle.png"
-  document.querySelector('#image4').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image5').src = "./checkbox-blank-circle-outline (1).png"
-break
-case biggerImages[3]:
-  document.querySelector('#image1').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image2').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image3').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image4').src = "./checkbox-blank-circle.png"
-  document.querySelector('#image5').src = "./checkbox-blank-circle-outline (1).png"
-break
-case biggerImages[4]:
-  document.querySelector('#image1').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image2').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image3').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image4').src = "./checkbox-blank-circle-outline (1).png"
-  document.querySelector('#image5').src = "./checkbox-blank-circle.png"
-
+  switch (biggerImages[currentImageBig]) {
+    case biggerImages[0]:
+      document.querySelector("#image1").src = "./checkbox-blank-circle.png";
+      document.querySelector("#image2").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image3").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image4").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image5").src =
+        "./checkbox-blank-circle-outline (1).png";
+      break;
+    case biggerImages[1]:
+      document.querySelector("#image1").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image2").src = "./checkbox-blank-circle.png";
+      document.querySelector("#image3").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image4").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image5").src =
+        "./checkbox-blank-circle-outline (1).png";
+      break;
+    case biggerImages[2]:
+      document.querySelector("#image1").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image2").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image3").src = "./checkbox-blank-circle.png";
+      document.querySelector("#image4").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image5").src =
+        "./checkbox-blank-circle-outline (1).png";
+      break;
+    case biggerImages[3]:
+      document.querySelector("#image1").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image2").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image3").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image4").src = "./checkbox-blank-circle.png";
+      document.querySelector("#image5").src =
+        "./checkbox-blank-circle-outline (1).png";
+      break;
+    case biggerImages[4]:
+      document.querySelector("#image1").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image2").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image3").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image4").src =
+        "./checkbox-blank-circle-outline (1).png";
+      document.querySelector("#image5").src = "./checkbox-blank-circle.png";
+  }
 }
+nextIcon();
+let iconInterval = setInterval(nextIcon, 3000);
+
+function iconEventListener() {
+  document.addEventListener("click", (e) => {
+    target = e.target;
+    switch (target.id) {
+      case "image1":
+        document.getElementById("big-image-scroller").src = "./animal1.jpg";
+        currentImageBig = 0;
+        biggerImages[0];
+        target.src = "./checkbox-blank-circle.png";
+        document.querySelector("#image2").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image3").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image4").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image5").src =
+          "./checkbox-blank-circle-outline (1).png";
+        clearInterval(imageInterval);
+        imageInterval = setInterval(nextBigImage, 3000);
+        clearInterval(iconInterval);
+        iconInterval = setInterval(nextIcon, 3000);
+        break;
+      case "image2":
+        document.getElementById("big-image-scroller").src = "./animal2.jpg";
+        currentImageBig = 1;
+        biggerImages[1];
+        target.src = "./checkbox-blank-circle.png";
+        document.querySelector("#image1").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image3").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image4").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image5").src =
+          "./checkbox-blank-circle-outline (1).png";
+        clearInterval(imageInterval);
+        imageInterval = setInterval(nextBigImage, 3000);
+        clearInterval(iconInterval);
+        iconInterval = setInterval(nextIcon, 3000);
+        break;
+      case "image3":
+        document.getElementById("big-image-scroller").src = "./animal3.jpg";
+        currentImageBig = 2;
+        biggerImages[2];
+        target.src = "./checkbox-blank-circle.png";
+        document.querySelector("#image1").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image2").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image4").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image5").src =
+          "./checkbox-blank-circle-outline (1).png";
+        clearInterval(imageInterval);
+        imageInterval = setInterval(nextBigImage, 3000);
+        clearInterval(iconInterval);
+        iconInterval = setInterval(nextIcon, 3000);
+        break;
+      case "image4":
+        document.getElementById("big-image-scroller").src = "./animal4.jpg";
+        currentImageBig = 3;
+        biggerImages[3];
+        target.src = "./checkbox-blank-circle.png";
+        document.querySelector("#image1").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image2").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image3").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image5").src =
+          "./checkbox-blank-circle-outline (1).png";
+        clearInterval(imageInterval);
+        imageInterval = setInterval(nextBigImage, 3000);
+        clearInterval(iconInterval);
+        iconInterval = setInterval(nextIcon, 3000);
+        break;
+      case "image5":
+        document.getElementById("big-image-scroller").src = "./animal5.jpg";
+        currentImageBig = 4;
+        biggerImages[4];
+        target.src = "./checkbox-blank-circle.png";
+        document.querySelector("#image1").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image2").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image3").src =
+          "./checkbox-blank-circle-outline (1).png";
+        document.querySelector("#image4").src =
+          "./checkbox-blank-circle-outline (1).png";
+        clearInterval(imageInterval);
+        imageInterval = setInterval(nextBigImage, 3000);
+        clearInterval(iconInterval);
+        iconInterval = setInterval(nextIcon, 3000);
+    }
+  });
 }
-nextIcon()
-setInterval(nextIcon, 3000)
-
-
-
+iconEventListener();
