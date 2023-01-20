@@ -193,3 +193,51 @@ function nextBigImage(){
 }
 setInterval(nextBigImage, 3000)
 
+
+
+
+
+function nextIcon() {
+switch(biggerImages[currentImageBig]){
+  case biggerImages[0]:
+  document.querySelector('#image1').src = "./checkbox-blank-circle.png"
+  document.querySelector('#image2').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image3').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image4').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image5').src = "./checkbox-blank-circle-outline (1).png"
+break
+case biggerImages[1]:
+  document.querySelector('#image1').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image2').src = "./checkbox-blank-circle.png"
+  document.querySelector('#image3').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image4').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image5').src = "./checkbox-blank-circle-outline (1).png"
+break
+case biggerImages[2]:
+  document.querySelector('#image1').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image2').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image3').src = "./checkbox-blank-circle.png"
+  document.querySelector('#image4').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image5').src = "./checkbox-blank-circle-outline (1).png"
+break
+case biggerImages[3]:
+  document.querySelector('#image1').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image2').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image3').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image4').src = "./checkbox-blank-circle.png"
+  document.querySelector('#image5').src = "./checkbox-blank-circle-outline (1).png"
+break
+case biggerImages[4]:
+  document.querySelector('#image1').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image2').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image3').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image4').src = "./checkbox-blank-circle-outline (1).png"
+  document.querySelector('#image5').src = "./checkbox-blank-circle.png"
+
+}
+}
+nextIcon()
+setInterval(nextIcon, 3000)
+
+
+
