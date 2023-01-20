@@ -2,7 +2,7 @@
 const linkCard = document.querySelector(".links");
 const hoverButton = document.querySelector(".hover-button");
 const triangle = document.querySelector(".uparrow");
-const header = document.querySelector('header')
+const header = document.querySelector("header");
 
 const chevronOne = document.querySelector("#chevron1");
 const chevronTwo = document.querySelector("#chevron2");
@@ -26,15 +26,13 @@ hoverButton.addEventListener("mouseenter", () => {
   linkCard.style.display = "flex";
   triangle.style.display = "block";
   linkCard.className = "links";
-  header.appendChild(linkCard)
-  
-  
+  header.appendChild(linkCard);
 });
 
 linkCard.addEventListener("mouseleave", () => {
   linkCard.className = "links-after";
   triangle.style.display = "none";
-  header.removeChild(linkCard)
+  header.removeChild(linkCard);
 });
 
 // function to underline the card and scale chevron
@@ -180,5 +178,18 @@ function nextImage() {
 
   document.getElementById("team-image").src = images[currentImage];
 }
-
 setInterval(nextImage, 3000);
+
+
+const biggerImages = ["./animal1.jpg", "./animal2.jpg", "./animal3.jpg", "./animal4.jpg", "./animal5.jpg", ]
+let currentImageBig = 0
+
+function nextBigImage(){
+  currentImageBig++
+  if(currentImageBig >= biggerImages.length){
+    currentImageBig = 0;
+  }
+  document.getElementById("big-image-scroller").src = biggerImages[currentImageBig]
+}
+setInterval(nextBigImage, 3000)
+
